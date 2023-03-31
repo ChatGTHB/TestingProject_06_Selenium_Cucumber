@@ -7,8 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class DialogContent extends Parent {
-    public DialogContent() {
+public class Locaters extends Parent {
+    public Locaters() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
@@ -40,7 +40,7 @@ public class DialogContent extends Parent {
     public WebElement SSN;
 
     @FindBy(id = "customer.username")
-    public WebElement userName;
+    public WebElement username;
 
     @FindBy(id = "customer.password")
     public WebElement password;
@@ -54,32 +54,70 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//p[text()='Your account was created successfully. You are now logged in.']")
     public WebElement successMessage;
 
-//    public WebElement getWebElement(String strButton){
-//
-//        switch (strButton)
-//        {
-//            case "addButton" : return addButton;
-//            case "saveButton" : return saveButton;
-//            case "nameInput" : return nameInput;
-//            case "codeInput" : return codeInput;
-//            case "integrationCode" : return integrationCode;
-//            case "priorityCode" : return priorityCode;
-//            case "toggleBar" : return toggleBar;
-//            case "academicPeriod" : return academicPeriod;
-//            case "academicPeriod1" : return academicPeriod1;
-//            case "gradeLevel" : return gradeLevel;
-//            case "gradeLevel2" : return gradeLevel2;
-//        }
-//        return null;
-//    }
+    @FindBy(xpath = "//input[@name='username']")
+    public WebElement loginUsername;
+
+    @FindBy(xpath = "//input[@name='password']")
+    public WebElement loginPassword;
+
+    @FindBy(xpath = "(//input[@type='submit'])[1]")
+    public WebElement loginButton;
+
+    @FindBy(xpath = "//a[text()='Log Out']")
+    public WebElement logoutLink;
+
+    @FindBy(xpath = "//b[text()='Welcome']")
+    public WebElement loginSuccessMessage;
+
+    @FindBy(xpath = "//p[@class='error']")
+    public WebElement loginUnsuccessMessage;
+
+    @FindBy(xpath = "//a[text()='Bill Pay']")
+    public WebElement billPayLink;
+    @FindBy(name = "payee.name")
+    public WebElement payeeName;
+    @FindBy(name = "payee.address.street")
+    public WebElement billAddress;
+    @FindBy(name = "payee.address.city")
+    public WebElement billCity;
+    @FindBy(name = "payee.address.state")
+    public WebElement billState;
+    @FindBy(name = "payee.address.zipCode")
+    public WebElement billZipCode;
+    @FindBy(name = "payee.phoneNumber")
+    public WebElement billPhone;
+    @FindBy(name = "payee.accountNumber")
+    public WebElement billAccount;
+    @FindBy(name = "verifyAccount")
+    public WebElement billVerifyAccount;
+    @FindBy(name = "amount")
+    public WebElement billAmount;
+    @FindBy(xpath = "//input[@class='button']")
+    public WebElement billPaymentButton;
+    @FindBy(xpath = "//h1[text()='Bill Payment Complete']")
+    public WebElement billConfirmPayMessage;
 
 
-//    public void deleteItem(String searchedText) {
-//        sendKeysFunction(searchInput, searchedText);
-//        clickFunction(searchButton);
-//        // wait.until(ExpectedConditions.elementToBeClickable(searchButton));
-//        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
-//        clickFunction(deleteImageButton);
-//        clickFunction(deleteDialogButton);
-//    }
+
+    public WebElement getWebElement(String strButton){
+
+        switch (strButton)
+        {
+            case "payeeName" : return payeeName;
+            case "billAddress" : return billAddress;
+            case "billCity" : return billCity;
+            case "billState" : return billState;
+            case "billZipCode" : return billZipCode;
+            case "billPhone" : return billPhone;
+            case "billAccount" : return billAccount;
+            case "billVerifyAccount" : return billVerifyAccount;
+            case "billAmount" : return billAmount;
+            case "billPaymentButton" : return billPaymentButton;
+            case "billConfirmPayMessage" : return billConfirmPayMessage;
+        }
+        return null;
+    }
+
+
+
 }
