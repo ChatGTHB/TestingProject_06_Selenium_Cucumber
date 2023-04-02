@@ -1,12 +1,9 @@
 package stepDefinitions;
 
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.Locaters;
-
 
 public class _02_LoginSteps {
     Locaters loc = new Locaters();
@@ -48,5 +45,4 @@ public class _02_LoginSteps {
         loc.sendKeysFunction(loc.loginUsername, username);
         loc.sendKeysFunction(loc.loginPassword, password);
     }
-
 }

@@ -13,7 +13,7 @@ Feature: Login Functionality
 
     Examples:
       | username | password |
-      | Kerem1    | password |
+      | Kerem   | password |
 
 
   Scenario Outline: Login Failure1

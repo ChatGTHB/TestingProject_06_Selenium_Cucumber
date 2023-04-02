@@ -2,7 +2,8 @@ Feature: Bill Pay Multiple Scenerio
 
   Background:
     Given Navigate to the ParaBank
-    When Enter your valid username and valid password and click button
+    When Enter your valid username and valid password
+    And Click login button
     Then User should successfully login to the system
     And Click bill pay link
 
