@@ -77,7 +77,6 @@ public class Locaters extends Parent {
     @FindBy(xpath = "//h1[text()='Bill Payment Complete']")
     public WebElement billConfirmPayMessage;
 
-
     public WebElement getWebElement(String strButton) {
 
         switch (strButton) {
@@ -106,6 +105,4 @@ public class Locaters extends Parent {
         }
         return null;
     }
-
-
 }
