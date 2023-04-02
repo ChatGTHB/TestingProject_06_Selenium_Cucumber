@@ -1,24 +1,28 @@
-Feature: Login Multiple Scenerio
+Feature: Login Functionality
 
   Background:
     Given Navigate to the ParaBank
 
-  Scenario Outline: Login Functionality
+  Scenario Outline: Login Successfully
 
-    When Enter your valid "<valid username>" and "<valid password>"
+    When Enter your valid "<username>" and "<password>"
+
     Then User should successfully login to the system
     And User should logout from the system
 
+    Examples:
+      | username | password |
+      | Kerem   | password |
 
-    When Enter valid "<valid username>" and invalid "<invalid password>"
+  Scenario Outline: Login Failure
+
+    When Enter valid "<username>" and invalid "<password>"
     Then Unsuccessfull attempt should be displayed
 
-
-    When Enter invalid "<invalid username>" and valid "<valid password>"
+    When Enter invalid "<username>" and valid "<password>"
     Then Unsuccessfull attempt should be displayed
 
     Examples:
-      | valid username | valid password | invalid username | invalid password |
-      | Kerem          | password       | Kerem_Y          | passwor          |
-
-
+      | username | password |
+      | Kerem   | passwor  |
+      | KeremY   | password |

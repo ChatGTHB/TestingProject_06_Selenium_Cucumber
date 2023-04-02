@@ -1,12 +1,14 @@
 package stepDefinitions;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.Locaters;
 
-public class _02_LoginSteps {
 
+public class _02_LoginSteps {
     Locaters loc = new Locaters();
 
     @When("Enter your valid {string} and {string}")
@@ -35,7 +37,7 @@ public class _02_LoginSteps {
 
     @Then("Unsuccessfull attempt should be displayed")
     public void unsuccessfullAttemptShouldBeDisplayed() {
-        loc.verifyContainsTextFunction(loc.loginUnsuccessMessage, "error");
+        loc.verifyContainsTextFunction(loc.loginUnsuccessMessage, "error has occurred");
     }
 
     @When("Enter invalid {string} and valid {string}")

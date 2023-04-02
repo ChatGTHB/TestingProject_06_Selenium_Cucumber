@@ -2,7 +2,7 @@ Feature: Bill Pay Multiple Scenerio
 
   Background:
     Given Navigate to the ParaBank
-    When Enter your valid username and valid password
+    When Enter your valid username and valid password and click button
     Then User should successfully login to the system
     And Click bill pay link
 
@@ -19,6 +19,7 @@ Feature: Bill Pay Multiple Scenerio
       | billAccount       | <account>       |
       | billVerifyAccount | <verifyAccount> |
       | billAmount        | <amount>        |
+
 
     And Click send payment button
 

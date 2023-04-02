@@ -9,13 +9,13 @@ import java.util.List;
 
 public class _03_BillPaySteps {
     Locaters loc = new Locaters();
-    @When("Enter your valid username and valid password")
-    public void enterYourValidUsernameAndValidPassword() {
-        loc.sendKeysFunction(loc.loginUsername,"Kerem");
+
+    @When("Enter your valid username and valid password and click button")
+    public void enterYourValidUsernameAndValidPasswordAndClickButton() {
+        loc.sendKeysFunction(loc.loginUsername,"Kerem1");
         loc.sendKeysFunction(loc.loginPassword,"password");
         loc.clickFunction(loc.loginButton);
     }
-
     @And("Click bill pay link")
     public void clickBillPayLink() {
         loc.clickFunction(loc.billPayLink);
@@ -30,7 +30,6 @@ public class _03_BillPaySteps {
             loc.sendKeysFunction(element, items.get(i).get(1));
         }
     }
-
     @And("Click send payment button")
     public void clicksendpaymentButton() {
         loc.clickFunction(loc.billPaymentButton);
@@ -40,5 +39,4 @@ public class _03_BillPaySteps {
     public void billPaymentCompleteMessageShouldBeDisplayed() {
         loc.verifyContainsTextFunction(loc.billConfirmPayMessage,"Complete");
     }
-
 }

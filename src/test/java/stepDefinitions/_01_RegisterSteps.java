@@ -36,6 +36,5 @@ public class _01_RegisterSteps {
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
         loc.verifyContainsTextFunction(loc.successMessage,"success");
-
     }
 }
