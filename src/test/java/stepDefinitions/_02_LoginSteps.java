@@ -15,6 +15,10 @@ public class _02_LoginSteps {
     public void enterYourValidAnd(String username, String password) {
         loc.sendKeysFunction(loc.loginUsername, username);
         loc.sendKeysFunction(loc.loginPassword, password);
+    }
+
+    @And("Click login button")
+    public void clickLoginButton() {
         loc.clickFunction(loc.loginButton);
     }
 
@@ -32,7 +36,6 @@ public class _02_LoginSteps {
     public void enterValidAndInvalid(String username, String password) {
         loc.sendKeysFunction(loc.loginUsername, username);
         loc.sendKeysFunction(loc.loginPassword, password);
-        loc.clickFunction(loc.loginButton);
     }
 
     @Then("Unsuccessfull attempt should be displayed")
@@ -44,6 +47,6 @@ public class _02_LoginSteps {
     public void enterInvalidAndValid(String username, String password) {
         loc.sendKeysFunction(loc.loginUsername, username);
         loc.sendKeysFunction(loc.loginPassword, password);
-        loc.clickFunction(loc.loginButton);
     }
+
 }

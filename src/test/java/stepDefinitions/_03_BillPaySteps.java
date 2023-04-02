@@ -12,7 +12,7 @@ public class _03_BillPaySteps {
 
     @When("Enter your valid username and valid password and click button")
     public void enterYourValidUsernameAndValidPasswordAndClickButton() {
-        loc.sendKeysFunction(loc.loginUsername,"Kerem1");
+        loc.sendKeysFunction(loc.loginUsername,"Kerem");
         loc.sendKeysFunction(loc.loginPassword,"password");
         loc.clickFunction(loc.loginButton);
     }
