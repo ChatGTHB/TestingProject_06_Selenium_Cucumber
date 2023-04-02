@@ -13,12 +13,12 @@ public class _01_RegisterSteps {
         GWD.getDriver().manage().window().maximize();
     }
 
-    String randomName="Kerem"+(int)(Math.random()*1000);
-    String randomUsername="KeremY"+(int)(Math.random()*1000);
+//    String randomName="Kerem"+(int)(Math.random()*1000);
+//    String randomUsername="KeremY"+(int)(Math.random()*1000);
     @When("Create an account")
     public void createAnAccount() {
         loc.clickFunction(loc.registerLink);
-        loc.sendKeysFunction(loc.firstName, randomName);
+        loc.sendKeysFunction(loc.firstName, "Kerem");
         loc.sendKeysFunction(loc.lastName, "Yigit");
         loc.sendKeysFunction(loc.address, "Dream street ");
         loc.sendKeysFunction(loc.city, "Oslo");
@@ -26,7 +26,7 @@ public class _01_RegisterSteps {
         loc.sendKeysFunction(loc.zipCode, "12345");
         loc.sendKeysFunction(loc.phone, "98765432100");
         loc.sendKeysFunction(loc.SSN, "5634");
-        loc.sendKeysFunction(loc.username, randomUsername);
+        loc.sendKeysFunction(loc.username, "Kerem");
         loc.sendKeysFunction(loc.password, "password");
         loc.sendKeysFunction(loc.confirm, "password");
 

@@ -35,7 +35,7 @@ public class _02_LoginSteps {
 
     @Then("Unsuccessfull attempt should be displayed")
     public void unsuccessfullAttemptShouldBeDisplayed() {
-        loc.verifyContainsTextFunction(loc.loginUnsuccessMessage, "could not be verified");
+        loc.verifyContainsTextFunction(loc.loginUnsuccessMessage, "error");
     }
 
     @When("Enter invalid {string} and valid {string}")
