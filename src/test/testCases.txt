@@ -5,13 +5,11 @@ Test edilecek web sitesi: https://parabank.parasoft.com/parabank/index.htm
 NOT: Bu bir test sitesidir.
 
 Bu projede Cucumber-Maven kullanınız.
-
 Senaryo 2 ve Senaryo 3 de “Senaryo Outline” yöntemini kullanınız.
-
 Hesap açarken gerçek olmayan bilgiler kullanınız.
-
 Projedeki her adımı sıfırdan kendiniz oluşturunuz copy-paste yöntemini kullanmadan
 framework’un tamamını kendiniz hazırlayınız.
+
 
 Senaryo 1| Register Functionality
  Para Bank sitesinde bir hesap açınız
