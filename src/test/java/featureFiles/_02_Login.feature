@@ -3,7 +3,6 @@ Feature: Login Functionality
   Background:
     Given Navigate to the ParaBank
 
-
   Scenario Outline: Login Successfully
 
     When Enter your valid "<username>" and "<password>"

@@ -21,7 +21,6 @@ Feature: Bill Pay Multiple Scenerio
       | billVerifyAccount | <verifyAccount> |
       | billAmount        | <amount>        |
 
-
     And Click send payment button
 
     Then Bill Payment Complete message should be displayed
